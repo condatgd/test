@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driverClassName: "org.h2.Driver"
+    url: "jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1"
+    username: root # LOCAL
+    password: admin # LOCAL
+  jpa:
+    database: h2
+    # SQL-Statements anzeigen?
+    show-sql: true
+    # Schema wird via JPA generiert (eins von none, validate, update, create, create-drop)
+    hibernate:
+      ddl-auto: create-drop
