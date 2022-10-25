@@ -1,7 +1,7 @@
 package de.berlin.gd.interpreter.jpa;
 
 import de.berlin.gd.interpreter.domain.interpreter.model.Statements;
-import de.berlin.gd.interpreter.domain.interpreter.ports.ProgramRepoService;
+import de.berlin.gd.interpreter.domain.ports.outbound_ports.ProgramRepoPort;
 import de.berlin.gd.interpreter.repo.programs.adaptors.ProgramRepo;
 import de.berlin.gd.interpreter.repo.programs.dbo.ProgramDBO;
 import org.junit.jupiter.api.Assertions;
@@ -16,7 +16,7 @@ public class ProgramRepoServiceTest {
     ProgramRepo programRepo;
 
     @Autowired
-    ProgramRepoService programRepoService;
+    ProgramRepoPort programRepoService;
 
     @Test
     public void load() {

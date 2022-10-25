@@ -3,7 +3,7 @@ package de.berlin.gd.interpreter.api.statements;
 import de.berlin.gd.interpreter.api.statements.dto.StatementDTO;
 import de.berlin.gd.interpreter.api.statements.dto.StatementsDTO;
 import de.berlin.gd.interpreter.api.statements.mapper.StatementMapper;
-import de.berlin.gd.interpreter.domain.interpreter.InterpreterService;
+import de.berlin.gd.interpreter.domain.ports.inbound_ports.InterpreterPort;
 import de.berlin.gd.interpreter.domain.interpreter.model.Statements;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StatementController {
 
-    InterpreterService interpreterService;
+    InterpreterPort interpreterService;
 
-    public StatementController(InterpreterService interpreterService) {
+    public StatementController(InterpreterPort interpreterService) {
         this.interpreterService = interpreterService;
     }
 

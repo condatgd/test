@@ -1,7 +1,7 @@
 package de.berlin.gd.interpreter.api;
 
 import de.berlin.gd.interpreter.api.statements.StatementController;
-import de.berlin.gd.interpreter.domain.interpreter.InterpreterService;
+import de.berlin.gd.interpreter.domain.ports.inbound_ports.InterpreterPort;
 import de.berlin.gd.interpreter.domain.interpreter.model.Statement;
 import de.berlin.gd.interpreter.domain.interpreter.model.Statements;
 import org.junit.jupiter.api.Test;
@@ -30,7 +30,7 @@ class StatementControllerTest {
     MockMvc mvc;
 
     @MockBean
-    InterpreterService interpreterService;
+    InterpreterPort interpreterService;
 
     @Test
     void submitStatement() throws Exception {

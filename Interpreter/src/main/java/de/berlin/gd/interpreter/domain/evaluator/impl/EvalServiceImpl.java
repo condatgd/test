@@ -4,7 +4,7 @@ import de.berlin.gd.interpreter.domain.eval.ExprParser;
 import de.berlin.gd.interpreter.domain.eval.model.Environment;
 import de.berlin.gd.interpreter.domain.eval.model.Expression;
 import de.berlin.gd.interpreter.domain.evaluator.EvalService;
-import de.berlin.gd.interpreter.domain.interpreter.ports.ProgramRepoService;
+import de.berlin.gd.interpreter.domain.ports.outbound_ports.ProgramRepoPort;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -14,9 +14,9 @@ public class EvalServiceImpl implements EvalService {
 
     Environment env = new Environment();
 
-    final ProgramRepoService programRepoService;
+    final ProgramRepoPort programRepoService;
 
-    public EvalServiceImpl(ProgramRepoService programRepoService) {
+    public EvalServiceImpl(ProgramRepoPort programRepoService) {
         this.programRepoService = programRepoService;
     }
 

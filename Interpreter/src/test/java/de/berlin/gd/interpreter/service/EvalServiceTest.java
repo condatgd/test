@@ -1,7 +1,7 @@
 package de.berlin.gd.interpreter.service;
 
 import de.berlin.gd.interpreter.domain.evaluator.impl.EvalServiceImpl;
-import de.berlin.gd.interpreter.domain.interpreter.ports.ProgramRepoService;
+import de.berlin.gd.interpreter.domain.ports.outbound_ports.ProgramRepoPort;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class EvalServiceTest {
 
     @Mock
-    ProgramRepoService programRepoService;
+    ProgramRepoPort programRepoService;
 
     @InjectMocks
     EvalServiceImpl serviceToTest;

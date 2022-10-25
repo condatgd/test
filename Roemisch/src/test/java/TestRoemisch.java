@@ -31,6 +31,6 @@ public class TestRoemisch {
             "1951,MCMLI"
     })
     void testZahlNachRoemisch(int num, String expected) {
-        assertEquals(expected, Roemisch.toRoemisch(num));
+        assertEquals(expected, Roemisch.toRoman(num));
     }
 }
