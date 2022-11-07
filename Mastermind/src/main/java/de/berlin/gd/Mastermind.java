@@ -6,6 +6,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public class Mastermind {
 
@@ -91,8 +92,8 @@ public class Mastermind {
         public Row(int length) {
             colors = new ArrayList<>();
             for (int i = 0; i < length; i++) {
-                int colorcode = rand.nextInt(Color.numColors());
-                colors.add(Color.values()[colorcode]);
+                int randomColorcode = rand.nextInt(Color.numColors());
+                colors.add(Color.values()[randomColorcode]);
             }
         }
 
@@ -123,38 +124,23 @@ public class Mastermind {
 
         public boolean contradicts(List<Guess> guessesHistory) {
             Row given_secret = this;
-            for (Guess guess : guessesHistory) {
-                Row row = guess.getRow();
-                int guessBlack = guess.getBlack();
-                int guessWhite = guess.getWhite();
-                int b = row.evaluateBlack(given_secret);
-                int w = row.evaluateWhite(given_secret);
-                if (guessBlack != b || guessWhite != w)
-                    return true;
-            }
-            return false;
+            return guessesHistory.stream().anyMatch(
+                    gh -> gh.getBlack() != gh.getRow().evaluateBlack(given_secret) ||
+                          gh.getWhite() != gh.getRow().evaluateWhite(given_secret)
+            );
         }
 
         public int evaluateBlack(Row secret) {
-            int countBlack = 0;
-            for (int i = 0; i < this.getLength(); i++) {
-                if (secret.getColor(i) == this.getColor(i)) {
-                    countBlack++;
-                }
-            }
-            return countBlack;
+            return (int)IntStream.range(0, secret.getColors().size())
+                    .filter(i -> secret.getColor(i) == this.getColor(i))
+                    .count();
         }
 
         public int evaluateWhite(Row secret) {
-            int countWhite = 0;
-            for (int i = 0; i < this.getLength(); i++) {
-                if (secret.getColor(i) != this.getColor(i)) {
-                    if (secret.getColors().contains(this.getColor(i))) {
-                        countWhite++;
-                    }
-                }
-            }
-            return countWhite;
+            return (int)IntStream.range(0, secret.getColors().size())
+                    .filter(i -> secret.getColor(i) != this.getColor(i) &&
+                                 secret.getColors().contains(this.getColor(i)))
+                    .count();
         }
 
         public void setColor(int i, Color nextColor) {
