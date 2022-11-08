@@ -48,22 +48,9 @@ public class Mastermind {
                 currentRow = guessesHistory.get(guessesHistory.size() - 1).getRow();
             }
             while (currentRow.contradicts(guessesHistory)) {
-                currentRow = nextRow(currentRow);
+                currentRow = currentRow.nextRow();
             }
             return new Guess(currentRow, 0, 0);
-        }
-
-        private Row nextRow(Row currentRow) {
-            Row newRow = new Row(currentRow);
-            int currentRowLength = currentRow.getLength();
-            for (int i = 0; i < currentRowLength; i++) {
-                Color colorI = currentRow.getColor(i);
-                Color nextColor = colorI.nextColor();
-                newRow.setColor(i, nextColor);
-                if (nextColor != Color.firstColor())
-                    break;
-            }
-            return newRow;
         }
     }
 
@@ -145,6 +132,19 @@ public class Mastermind {
 
         public void setColor(int i, Color nextColor) {
             colors.set(i, nextColor);
+        }
+
+        public Row nextRow() {
+            Row newRow = new Row(this);
+            int currentRowLength = this.getLength();
+            for (int i = 0; i < currentRowLength; i++) {
+                Color colorI = this.getColor(i);
+                Color nextColor = colorI.nextColor();
+                newRow.setColor(i, nextColor);
+                if (nextColor != Color.firstColor())
+                    break;
+            }
+            return newRow;
         }
     }
 
