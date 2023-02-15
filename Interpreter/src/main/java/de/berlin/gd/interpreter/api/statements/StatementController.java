@@ -3,6 +3,7 @@ package de.berlin.gd.interpreter.api.statements;
 import de.berlin.gd.interpreter.api.statements.dto.StatementDTO;
 import de.berlin.gd.interpreter.api.statements.dto.StatementsDTO;
 import de.berlin.gd.interpreter.api.statements.mapper.StatementMapper;
+import de.berlin.gd.interpreter.domain.interpreter.impl.InterpreterServiceImpl;
 import de.berlin.gd.interpreter.domain.ports.inbound_ports.InterpreterPort;
 import de.berlin.gd.interpreter.domain.interpreter.model.Statements;
 import org.springframework.web.bind.annotation.RequestBody;

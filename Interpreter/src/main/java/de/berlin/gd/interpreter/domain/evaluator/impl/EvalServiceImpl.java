@@ -1,8 +1,10 @@
 package de.berlin.gd.interpreter.domain.evaluator.impl;
 
 import de.berlin.gd.interpreter.domain.eval.ExprParser;
+import de.berlin.gd.interpreter.domain.eval.impl.ExprParserImpl;
 import de.berlin.gd.interpreter.domain.eval.model.Environment;
 import de.berlin.gd.interpreter.domain.eval.model.Expression;
+import de.berlin.gd.interpreter.domain.eval.model.ParseResult;
 import de.berlin.gd.interpreter.domain.evaluator.EvalService;
 import de.berlin.gd.interpreter.domain.ports.outbound_ports.ProgramRepoPort;
 import org.springframework.stereotype.Service;
@@ -25,8 +27,8 @@ public class EvalServiceImpl implements EvalService {
             env = new Environment();
             return "";
         }
-        ExprParser exprParser = new ExprParser();
-        Optional<ExprParser.ParseResult> parseResultOptional = exprParser.parse(expr);
+        ExprParser exprParser = new ExprParserImpl();
+        Optional<ParseResult> parseResultOptional = exprParser.parse(expr);
         if(parseResultOptional.isPresent()) {
             Expression eval = parseResultOptional.get().getExpr().eval(env);
             return eval.toString();
