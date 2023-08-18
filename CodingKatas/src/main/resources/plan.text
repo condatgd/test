@@ -1,0 +1,11 @@
+win-X -> win-X
+X-win -> X-win
+0-X -> 15-X
+15-X -> 30-X
+30-40 -> deuce-deuce
+30-X -> 40-X
+40-X -> win-X
+deuce-deuce -> adv-none
+adv-none -> win-none
+none-adv -> deuce-deuce
+
