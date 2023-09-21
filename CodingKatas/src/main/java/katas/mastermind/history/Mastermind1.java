@@ -1,4 +1,4 @@
-package katas.mastermind;
+package katas.mastermind.history;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,9 +8,23 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-public class Mastermind {
+public class Mastermind1 {
 
     public static final int ROW_LENGTH = 4;
+
+    public static void main(String[] args) {
+        SecretHolder secretHolder = new SecretHolder(ROW_LENGTH);
+        Player player = new Player();
+        List<Guess> guessesHistory = new ArrayList<>();
+        Guess guess;
+        do {
+            guess = player.findNewGuess(guessesHistory);
+            secretHolder.evaluate(guess); // the secret is not visible for the Player !!!
+            System.out.println("guess: " + guess);
+            guessesHistory.add(guess);
+        } while (!guess.isSolution());
+
+    }
 
     public static class SecretHolder {
         Row secret;

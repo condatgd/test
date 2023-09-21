@@ -1,10 +1,11 @@
 package roemisch;
 
-import katas.roemisch.Roemisch;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import katas.roemisch.Roemisch;
 
 public class TestRoemisch {
 
