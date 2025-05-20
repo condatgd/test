@@ -1,0 +1,17 @@
+Uhrzeit;Name;Sensor;Wert;Einheit;Grundlast;Einheit;Wert+Grundlast;Einheit;Energie(Wert);Einheit;Energie(Wert+Grundlast);Einheit;CO2 Wert;Einheit
+2023/11/27T11:31:40-385;MastermindTests->sucess()->repetition 1 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;34,56;;
+2023/11/27T11:31:40-408;MastermindTests->sucess()->repetition 1 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;21,83;W;6,71;W;28,54;W;478,728;J;625,896;J;0,00002;gCO2;
+2023/11/27T11:32:04-317;MastermindTests->sucess()->repetition 2 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;34,34;;
+2023/11/27T11:32:04-336;MastermindTests->sucess()->repetition 2 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;12,51;W;6,71;W;19,22;W;286,056;J;439,488;J;0,00002;gCO2;
+2023/11/27T11:32:29-638;MastermindTests->sucess()->repetition 3 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;35,55;;
+2023/11/27T11:32:29-658;MastermindTests->sucess()->repetition 3 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;11,91;W;6,71;W;18,62;W;289,116;J;452,016;J;0,00002;gCO2;
+2023/11/27T11:32:55-218;MastermindTests->sucess()->repetition 4 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;35,11;;
+2023/11/27T11:32:55-238;MastermindTests->sucess()->repetition 4 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;11,91;W;6,71;W;18,62;W;292,176;J;456,768;J;0,00002;gCO2;
+2023/11/27T11:33:20-802;MastermindTests->sucess()->repetition 5 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;33,53;;
+2023/11/27T11:33:20-820;MastermindTests->sucess()->repetition 5 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;11,6;W;6,71;W;18,31;W;284,544;J;449,136;J;0,00002;gCO2;
+2023/11/27T11:34:45-413;MastermindTests->sucess()->repetition 8 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;31,24;;
+2023/11/27T11:34:45-438;MastermindTests->sucess()->repetition 8 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;10,26;W;6,71;W;16,97;W;278,244;J;460,188;J;0,00002;gCO2;
+2023/11/27T11:35:15-521;MastermindTests->sucess()->repetition 9 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;37,31;;
+2023/11/27T11:35:15-551;MastermindTests->sucess()->repetition 9 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;9,57;W;6,71;W;16,28;W;278,028;J;472,968;J;0,00002;gCO2;
+2023/11/27T11:35:44-761;MastermindTests->sucess()->repetition 10 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Load->CPU Total;38,19;;
+2023/11/27T11:35:44-788;MastermindTests->sucess()->repetition 10 of 10;GD-WIN11-LAP->11th Gen Intel Core i7-1165G7->Powers->CPU Package;9,39;W;6,71;W;16,1;W;264,456;J;453,456;J;0,00002;gCO2;

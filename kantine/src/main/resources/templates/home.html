@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h2 th:text="'Kantinen Belegung'" />
+
+    <img src="/api/v1/grafik?startStunde=10&startMinute=0&sekundenProIntervall=60"  alt="Statistik Bild"/>
+    <form action="/ereignis" method="post">
+        <label>User<input type="text" name="user"/></label>
+        <input type="hidden" name="ereignisTyp" value="BETRETEN"/>
+        <input type="submit" value="Betreten">
+    </form>
+    <form action="/ereignis" method="post">
+        <label>User<input type="text" name="user"/></label>
+        <input type="hidden" name="ereignisTyp" value="VERLASSEN"/>
+        <input type="submit" value="Verlassen">
+    </form>
+
+
+</body>
+</html>
